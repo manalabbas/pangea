@@ -1,0 +1,159 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css');
+
+html {
+  background: linear-gradient(135deg, #fe8e7d, #ffd15d);
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #da6958;
+}
+
+#map {
+  position: absolute;
+  top: 10vh;
+  bottom: 0;
+  width: 100%;
+}
+
+#marker {
+  background-image: url('https://i.ibb.co/qRTfZc4/marker.png');
+  background-size: cover;
+  width: 3.5vh;
+  height: 5.1vh;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  width: 25vw;
+}
+
+.navbar {
+  overflow: hidden;
+  background: linear-gradient(135deg, #fe8e7d, #ffd15d);
+  height: 10vh;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 2vh 2vw;
+}
+
+.navbar img {
+  height: 6.5vh;
+}
+
+.navbar .bookmarks {
+  float: right;
+}
+
+.navbar .bookmarks input {
+  padding: 1vh;
+  margin: 2.5vh 1.5vh;
+  font-size: 1rem;
+  width:13vw;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0 0.5rem #fe8e7d;
+  color: #da6958;
+}
+
+::placeholder {
+  color: #fe8e7d;
+  font-style: italic;
+}
+
+.navbar .bookmarks button {
+  float: right;
+  padding: 1vh;
+  margin: 2.5vh;
+  background-color: #fe8e7d;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.15rem 0 0.5rem #fe8e7d;
+}
+
+.navbar .bookmarks button:hover {
+  background-color: #da6958;
+}
+
+.popup h3 {
+  margin: 0;
+  color: #da6958;
+}
+
+a {
+  color: #fe8e7d;
+}
+
+a:visited, a:hover {
+  color: #da6958;
+}
+
+.icon a {
+  float: right;
+  color: #ffd15d;
+}
+
+.icon a:visited, a:hover {
+  color: #da6958;
+}
+
+.data {
+  flex-direction: column;
+  display: flex;
+  align-content: center;
+  justify-content: start;
+}
+
+table {
+  padding: 0 20vh;
+  text-align: center;
+}
+
+th {
+  color: white;
+  background-color: #ffd15d;
+  border: none;
+  border-radius:0;
+  padding: 1vh;
+  font-size: 2.75vh;
+}
+
+td {
+  background-color: aliceblue;
+  padding: 3vh 0;
+  font-size: 2.25vh;
+}
+
+@media screen and (max-width: 800px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  td {
+    position: relative;
+    padding-left: 50%;
+  }
+  td:before {
+    position: absolute;
+    left: 6px;
+    content: attr(data-th);
+    font-weight: bold;
+  }
+  td:first-of-type {
+    font-weight: bold;
+  }
+}
